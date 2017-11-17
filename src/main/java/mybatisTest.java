@@ -76,4 +76,5 @@ public class mybatisTest {
         sqlSession.commit();
         sqlSession.close();
     }
+
 }
