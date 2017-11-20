@@ -73,6 +73,7 @@ public class UserDaoMapperTest {
         sqlSession.commit();
         sqlSession.close();
     }
+
     @Test
     public void findUserByinfo() throws Exception {
         SqlSession sqlSession = sqlSessionFactory.openSession();
@@ -83,9 +84,10 @@ public class UserDaoMapperTest {
         userCustom.setSex("男");
         userQuerVo.setUserCustom(userCustom);
 
-        UserCustom userCustom1= userDaoMapper.findUserByinfo(userQuerVo);
+        UserCustom userCustom1 = userDaoMapper.findUserByinfo(userQuerVo);
         System.out.println(userCustom1);
     }
+
     @Test
     public void findUserCount() throws Exception {
         SqlSession sqlSession = sqlSessionFactory.openSession();
@@ -94,8 +96,16 @@ public class UserDaoMapperTest {
         UserCustom userCustom = new UserCustom();
         userCustom.setUsername("马");
         userQuerVo.setUserCustom(userCustom);
-        int num= userDaoMapper.findUserCount(userQuerVo);
+        int num = userDaoMapper.findUserCount(userQuerVo);
         System.out.println(num);
+    }
+
+    @Test
+    public void findUserByResultMap() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        UserDaoMapper userDaoMapper = sqlSession.getMapper(UserDaoMapper.class);
+        User user = userDaoMapper.findUserByResultMap(10);
+        System.out.println(user);
     }
 
 }

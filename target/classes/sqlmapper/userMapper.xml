@@ -2,20 +2,26 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-        <!--namespace命名空间，作用就是对sql进行分类化管理，区分不同的sql空间
-        注意：使用mapper代理方法开发，namespace有特殊重要作用-->
+<!--namespace命名空间，作用就是对sql进行分类化管理，区分不同的sql空间
+注意：使用mapper代理方法开发，namespace有特殊重要作用-->
 <mapper namespace="dao.UserDaoMapper">
+    <!--配置resultMap映射-->
+        <resultMap id="PojoresultMap" type="entity.User">
+            <id column="i" property="id"></id>
+            <result column="us" property="username"></result>
+            <result column="ad" property="address"></result>
+        </resultMap>
     <!--在映射文件中配置很多sql语句-->
-   <!-- 需求：通过id查询用户表的记录-->
- <!--   通过select执行数据库查询
-    id：标识映射文件中sql，将sql语句封装到mappedStatement对象中，所以将id称为statement的id
-    parameterType：指定输入参数的类型，这里指定int型
-    resultType:指定sql输出结果所映射的java对象类型
-    #{ }表示一个占位符
-    #{id}：其中的id表示接收输入的参数，参数名称就是id-->
+    <!-- 需求：通过id查询用户表的记录-->
+    <!--   通过select执行数据库查询
+       id：标识映射文件中sql，将sql语句封装到mappedStatement对象中，所以将id称为statement的id
+       parameterType：指定输入参数的类型，这里指定int型
+       resultType:指定sql输出结果所映射的java对象类型
+       #{ }表示一个占位符
+       #{id}：其中的id表示接收输入的参数，参数名称就是id-->
     <select id="findUserById" parameterType="int" resultType="entity.User">
     SELECT * FROM user WHERE id = #{id}
-</select>
+    </select>
     <!--根据用户名称模糊查询信息-->
     <!--可能返回多条信息
     ${}：表示拼接sql串，将接收到的参数的内容不加任何修饰拼接在sql中
@@ -46,12 +52,16 @@
     <update id="updateUser" parameterType="entity.User">
         UPDATE user SET username = #{username},birthday = #{birthday},sex = #{sex},address = #{address} WHERE  id = #{id}
     </update>
-    <!--输入映射 pojo包装类型-->
+    <!--输入映射 包装类型-->
     <select id="findUserByinfo" parameterType="entity.UserQuerVo" resultType="entity.UserCustom">
         SELECT * FROM user WHERE username = #{userCustom.username} AND sex LIKE "%${userCustom.sex}%"
     </select>
-
+    <!--输出映射 pojo resultType-->
     <select id="findUserCount" parameterType="entity.UserQuerVo" resultType="int">
         SELECT COUNT(*) FROM  user WHERE username LIKE "%${userCustom.username}%"
     </select>
+    <!--输出映射 pojo resultMap-->
+    <select id="findUserByResultMap" parameterType="int" resultMap="PojoresultMap">
+            SELECT id i,username us, address ad FROM user WHERE id = #{userCustom.id}
+        </select>
 </mapper>
