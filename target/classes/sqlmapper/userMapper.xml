@@ -5,12 +5,29 @@
 <!--namespace命名空间，作用就是对sql进行分类化管理，区分不同的sql空间
 注意：使用mapper代理方法开发，namespace有特殊重要作用-->
 <mapper namespace="dao.UserDaoMapper">
+    <!--动态sql片段
+    id:sql片段唯一标识
+
+    基于单表来定义sql片段，这样的话这个sql片段可重用性才高，在sql片段可重用性才高
+    在sql片段不要包括where
+    -->
+    <sql id="qusery_user_where">
+        <if test="userCustom.username != null">
+            <if test="userCustom.username != null and userCustom.username != ''">
+                and username = #{userCustom.username}
+            </if>
+            <if test="userCustom.sex != null and userCustom.sex != ''">
+                and sex like "%${userCustom.sex}%"
+            </if>
+        </if>
+    </sql>
+
     <!--配置resultMap映射-->
-        <resultMap id="PojoresultMap" type="entity.User">
-            <id column="i" property="id"></id>
-            <result column="us" property="username"></result>
-            <result column="ad" property="address"></result>
-        </resultMap>
+    <resultMap id="PojoresultMap" type="entity.User">
+        <id column="i" property="id"></id>
+        <result column="us" property="username"></result>
+        <result column="ad" property="address"></result>
+    </resultMap>
     <!--在映射文件中配置很多sql语句-->
     <!-- 需求：通过id查询用户表的记录-->
     <!--   通过select执行数据库查询
@@ -54,7 +71,11 @@
     </update>
     <!--输入映射 包装类型-->
     <select id="findUserByinfo" parameterType="entity.UserQuerVo" resultType="entity.UserCustom">
-        SELECT * FROM user WHERE username = #{userCustom.username} AND sex LIKE "%${userCustom.sex}%"
+        SELECT * FROM user
+        <where>
+            <!--sql片段引用-->
+            <include refid="qusery_user_where"></include>
+        </where>
     </select>
     <!--输出映射 pojo resultType-->
     <select id="findUserCount" parameterType="entity.UserQuerVo" resultType="int">
@@ -64,4 +85,18 @@
     <select id="findUserByResultMap" parameterType="int" resultMap="PojoresultMap">
             SELECT id i,username us, address ad FROM user WHERE id = #{userCustom.id}
         </select>
+    <!--输入list集合 foreach遍历-->
+    <select id="findUserList" parameterType="entity.UserQuerVo" resultType="entity.UserCustom">
+        SELECT * FROM user WHERE
+        <!--collection:指定输入对象中集合属性
+item:每次遍历生成对象
+open:开始遍历时拼接串
+close:结束遍历时拼接串
+separator:遍历两个对象中需要拼接的串
+-->
+            <foreach collection="ids" item="id" open="(" close=")" separator="or">
+                <!--每次遍历需要拼接的串-->
+                id = #{id}
+            </foreach>
+    </select>
 </mapper>

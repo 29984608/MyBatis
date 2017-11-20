@@ -20,9 +20,12 @@ public interface UserDaoMapper {
     //输入映射 pojo包装类型
     public UserCustom findUserByinfo(UserQuerVo userQuerVo) throws Exception;
 
-        //输出映射 pojo resultType
-        public int findUserCount(UserQuerVo userQuerVo) throws Exception;
+    //输出映射 pojo resultType
+    public int findUserCount(UserQuerVo userQuerVo) throws Exception;
 
     //输出映射 pojo resultMap
     public User findUserByResultMap(int id) throws Exception;
+
+    //
+    public UserCustom findUserList(UserQuerVo userQuerVo) throws Exception;
 }

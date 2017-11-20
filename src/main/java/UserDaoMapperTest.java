@@ -6,13 +6,17 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.junit.Before;
 import org.junit.Test;
 
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class UserDaoMapperTest {
     private SqlSessionFactory sqlSessionFactory;
@@ -89,6 +93,14 @@ public class UserDaoMapperTest {
     }
 
     @Test
+    public void findUserByResultMap() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        UserDaoMapper userDaoMapper = sqlSession.getMapper(UserDaoMapper.class);
+        User user = userDaoMapper.findUserByResultMap(10);
+        System.out.println(user);
+    }
+
+    @Test
     public void findUserCount() throws Exception {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         UserDaoMapper userDaoMapper = sqlSession.getMapper(UserDaoMapper.class);
@@ -99,13 +111,16 @@ public class UserDaoMapperTest {
         int num = userDaoMapper.findUserCount(userQuerVo);
         System.out.println(num);
     }
-
     @Test
-    public void findUserByResultMap() throws Exception {
+    public void findUserList() throws Exception {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         UserDaoMapper userDaoMapper = sqlSession.getMapper(UserDaoMapper.class);
-        User user = userDaoMapper.findUserByResultMap(10);
-        System.out.println(user);
+        UserQuerVo userQuerVo = new UserQuerVo();
+        List ids = new ArrayList();
+        ids.add(1);
+        userQuerVo.setIds(ids);
+       UserCustom userList =  userDaoMapper.findUserList(userQuerVo);
+        System.out.println(userList);
     }
 
 }
