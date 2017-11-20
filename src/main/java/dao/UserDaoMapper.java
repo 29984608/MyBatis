@@ -19,4 +19,7 @@ public interface UserDaoMapper {
 
     //输入映射 pojo包装类型
     public UserCustom findUserByinfo(UserQuerVo userQuerVo) throws Exception;
+
+    //
+    public int findUserCount(UserQuerVo userQuerVo) throws Exception;
 }

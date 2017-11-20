@@ -50,4 +50,8 @@
     <select id="findUserByinfo" parameterType="entity.UserQuerVo" resultType="entity.UserCustom">
         SELECT * FROM user WHERE username = #{userCustom.username} AND sex LIKE "%${userCustom.sex}%"
     </select>
+
+    <select id="findUserCount" parameterType="entity.UserQuerVo" resultType="int">
+        SELECT COUNT(*) FROM  user WHERE username LIKE "%${userCustom.username}%"
+    </select>
 </mapper>

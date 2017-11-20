@@ -46,8 +46,12 @@
     <update id="updateUser" parameterType="entity.User">
         UPDATE user SET username = #{username},birthday = #{birthday},sex = #{sex},address = #{address} WHERE  id = #{id}
     </update>
-
+    <!--输入映射 pojo包装类型-->
     <select id="findUserByinfo" parameterType="entity.UserQuerVo" resultType="entity.UserCustom">
         SELECT * FROM user WHERE username = #{userCustom.username} AND sex LIKE "%${userCustom.sex}%"
+    </select>
+
+    <select id="findUserCount" parameterType="entity.UserQuerVo" resultType="int">
+        SELECT COUNT(*) FROM  user WHERE username LIKE "%${userCustom.username}%"
     </select>
 </mapper>

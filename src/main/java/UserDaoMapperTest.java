@@ -86,5 +86,16 @@ public class UserDaoMapperTest {
         UserCustom userCustom1= userDaoMapper.findUserByinfo(userQuerVo);
         System.out.println(userCustom1);
     }
+    @Test
+    public void findUserCount() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        UserDaoMapper userDaoMapper = sqlSession.getMapper(UserDaoMapper.class);
+        UserQuerVo userQuerVo = new UserQuerVo();
+        UserCustom userCustom = new UserCustom();
+        userCustom.setUsername("马");
+        userQuerVo.setUserCustom(userCustom);
+        int num= userDaoMapper.findUserCount(userQuerVo);
+        System.out.println(num);
+    }
 
 }

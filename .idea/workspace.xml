@@ -7,17 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60d555dc-61ff-4e5e-80d5-866b3188c54d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/entity/UserCustom.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/entity/UserQuerVo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/UserDaoImplTest.java" afterPath="$PROJECT_DIR$/src/main/java/UserDaoImplTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/UserDaoMapperTest.java" afterPath="$PROJECT_DIR$/src/main/java/UserDaoMapperTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/UserDaoMapper.java" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDaoMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/impl/UserDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/UserDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mybatisTest.java" afterPath="$PROJECT_DIR$/src/main/java/mybatisTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sqlmap/userMap.xml" afterPath="$PROJECT_DIR$/src/main/resources/sqlmap/userMap.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sqlmapper/userMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/sqlmapper/userMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -58,11 +49,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserDaoMapperTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserDaoMapperTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/UserDaoMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="85" column="5" lean-forward="true" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
+            <state relative-caret-position="206">
+              <caret line="97" column="30" lean-forward="false" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,8 +64,8 @@
       <file leaf-file-name="UserDaoMapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDaoMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="296">
+              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,18 +73,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userMapper.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmapper/userMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="819">
-              <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+            <state relative-caret-position="326">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
-                <marker date="1511151718964" expanded="true" signature="652:687" ph="SELECT * FRO... user" />
-                <marker date="1511151718964" expanded="true" signature="943:994" ph="SELECT * FRO... user" />
-                <marker date="1511151718964" expanded="true" signature="1656:1689" ph="DELETE from " />
-                <marker date="1511151718964" expanded="true" signature="1792:1905" ph="UPDATE user " />
-                <marker date="1511151718964" expanded="true" signature="2051:2144" ph="SELECT * FRO... user" />
+                <marker date="1511153116000" expanded="true" signature="652:687" ph="SELECT * FRO... user" />
+                <marker date="1511153116000" expanded="true" signature="943:994" ph="SELECT * FRO... user" />
+                <marker date="1511153116000" expanded="true" signature="1656:1689" ph="DELETE from " />
+                <marker date="1511153116000" expanded="true" signature="1792:1905" ph="UPDATE user " />
+                <marker date="1511153116000" expanded="true" signature="2051:2144" ph="SELECT * FRO... user" />
+                <marker date="1511153116000" expanded="true" signature="2251:2324" ph="SELECT COUNT... user" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserQuerVo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entity/UserQuerVo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,9 +134,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/entity/UserCustom.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/UserQuerVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/UserDaoMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/UserDaoMapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/sqlmapper/userMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/UserDaoMapper.java" />
       </list>
     </option>
   </component>
@@ -151,7 +153,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="width" value="1932" />
     <option name="height" value="1092" />
@@ -290,7 +292,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserDaoMapperTest.findUserByinfo">
+  <component name="RunManager" selected="JUnit.UserDaoMapperTest.findUserCount">
     <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.36" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
@@ -384,6 +386,26 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="UserDaoMapperTest.findUserCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="MyBatis" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserDaoMapperTest" />
+      <option name="METHOD_NAME" value="findUserCount" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -465,13 +487,15 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.UserDaoMapperTest.findUserByinfo" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.UserDaoMapperTest.findUserCount" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserDaoMapperTest.findUserByinfo" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UserDaoMapperTest.findUserCount" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UserDaoMapperTest.findUserByinfo" />
       </list>
     </recent_temporary>
   </component>
@@ -496,20 +520,11 @@
       <workItem from="1510884664321" duration="595000" />
       <workItem from="1510897644212" duration="5936000" />
       <workItem from="1511150911570" duration="140000" />
-      <workItem from="1511151267641" duration="483000" />
+      <workItem from="1511151267641" duration="1843000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserDaoMapperTest_findUserById - 2017.11.17 at 15h 33m 18s.xml">
-      <configuration name="UserDaoMapperTest.findUserById" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserDaoMapperTest_findUserById - 2017.11.19 at 21h 52m 43s.xml">
-      <configuration name="UserDaoMapperTest.findUserById" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserDaoMapperTest_findUserById - 2017.11.19 at 21h 55m 58s.xml">
-      <configuration name="UserDaoMapperTest.findUserById" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UserDaoMapperTest_findUserById - 2017.11.20 at 12h 09m 49s.xml">
       <configuration name="UserDaoMapperTest.findUserById" configurationId="JUnit" />
     </history-entry>
@@ -518,6 +533,15 @@
     </history-entry>
     <history-entry file="UserDaoMapperTest_findUserByinfo - 2017.11.20 at 12h 21m 15s.xml">
       <configuration name="UserDaoMapperTest.findUserByinfo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserDaoMapperTest_findUserCount - 2017.11.20 at 12h 43m 28s.xml">
+      <configuration name="UserDaoMapperTest.findUserCount" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserDaoMapperTest_findUserCount - 2017.11.20 at 12h 44m 21s.xml">
+      <configuration name="UserDaoMapperTest.findUserCount" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserDaoMapperTest_findUserCount - 2017.11.20 at 12h 45m 38s.xml">
+      <configuration name="UserDaoMapperTest.findUserCount" configurationId="JUnit" />
     </history-entry>
     <history-entry file="UserDaoMapperTest_insertUserd - 2017.11.17 at 15h 30m 27s.xml">
       <configuration name="UserDaoMapperTest.insertUserd" configurationId="JUnit" />
@@ -533,10 +557,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35742000" />
+    <option name="totallyTimeSpent" value="37102000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -549,7 +573,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4202294" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4202294" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1009,46 +1033,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entity/UserQuerVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding>
-            <element signature="e#150#151#0" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/UserDaoMapperTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmapper/userMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="85" column="5" lean-forward="true" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
+        <state relative-caret-position="326">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1511153116000" expanded="true" signature="652:687" ph="SELECT * FRO... user" />
+            <marker date="1511153116000" expanded="true" signature="943:994" ph="SELECT * FRO... user" />
+            <marker date="1511153116000" expanded="true" signature="1656:1689" ph="DELETE from " />
+            <marker date="1511153116000" expanded="true" signature="1792:1905" ph="UPDATE user " />
+            <marker date="1511153116000" expanded="true" signature="2051:2144" ph="SELECT * FRO... user" />
+            <marker date="1511153116000" expanded="true" signature="2251:2324" ph="SELECT COUNT... user" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDaoMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="296">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmapper/userMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/UserDaoMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+        <state relative-caret-position="206">
+          <caret line="97" column="30" lean-forward="false" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
           <folding>
-            <marker date="1511151718964" expanded="true" signature="652:687" ph="SELECT * FRO... user" />
-            <marker date="1511151718964" expanded="true" signature="943:994" ph="SELECT * FRO... user" />
-            <marker date="1511151718964" expanded="true" signature="1656:1689" ph="DELETE from " />
-            <marker date="1511151718964" expanded="true" signature="1792:1905" ph="UPDATE user " />
-            <marker date="1511151718964" expanded="true" signature="2051:2144" ph="SELECT * FRO... user" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
