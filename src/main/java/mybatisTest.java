@@ -22,20 +22,22 @@ public class mybatisTest {
         //通过工厂得到SqlSession
         SqlSession sqlSession = sqlSessionFactory.openSession();
         //通过SqlSession操作数据库
-            //第一个参数：等于 = namespace+“.”+statement的id
-            //第二个参数：指定映射文件中所匹配的parameterType类型的参数
-        User user = sqlSession.selectOne("test.findUserById",1);
+        //第一个参数：等于 = namespace+“.”+statement的id
+        //第二个参数：指定映射文件中所匹配的parameterType类型的参数
+        User user = sqlSession.selectOne("test.findUserById", 1);
         System.out.println(user);
         sqlSession.close();
     }
+
     @Test
     public void findUserByName() throws IOException {
         InputStream inputStream = Resources.getResourceAsStream("SqlMapConfig.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession sqlSession = sqlSessionFactory.openSession();
-        List<User> list = sqlSession.selectList("test.findUserByName","马");
-        System.out.println(list+"\n");
+        List<User> list = sqlSession.selectList("test.findUserByName", "马");
+        System.out.println(list + "\n");
     }
+
     @Test
     public void insertUser() throws IOException {
         InputStream inputStream = Resources.getResourceAsStream("SqlMapConfig.xml");
@@ -46,33 +48,35 @@ public class mybatisTest {
         user.setBirthday(new Date());
         user.setSex("男");
         user.setAddress("美国纽约");
-        sqlSession.insert("test.insertUser",user);
+        sqlSession.insert("test.insertUser", user);
         sqlSession.commit();
         System.out.println(user.getId());
         System.out.println(new Date());
         sqlSession.close();
     }
+
     @Test
     public void deleteUser() throws IOException {
-       InputStream inputStream = Resources.getResourceAsStream("SqlMapConfig.xml");
-       SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-       SqlSession sqlSession = sqlSessionFactory.openSession();
-       sqlSession.delete("test.deleteUser",12);
+        InputStream inputStream = Resources.getResourceAsStream("SqlMapConfig.xml");
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        sqlSession.delete("test.deleteUser", 12);
         sqlSession.commit();
         sqlSession.close();
     }
+
     @Test
     public void updateUser() throws IOException {
         InputStream inputStream = Resources.getResourceAsStream("SqlMapConfig.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-        SqlSession sqlSession= sqlSessionFactory.openSession();
+        SqlSession sqlSession = sqlSessionFactory.openSession();
         User user = new User();
         user.setId(12);
         user.setUsername("李四");
         user.setBirthday(new Date());
         user.setSex("男");
         user.setAddress("英国伦敦");
-        sqlSession.update("test.updateUser",user);
+        sqlSession.update("test.updateUser", user);
         sqlSession.commit();
         sqlSession.close();
     }

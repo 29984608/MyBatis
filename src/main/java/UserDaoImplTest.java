@@ -13,24 +13,27 @@ import java.util.Date;
 
 public class UserDaoImplTest {
     private SqlSessionFactory sqlSessionFactory;
+
     @Before
     //测试前执行
     public void setUp() throws IOException {
         //配置文件
         String resource = "SqlMapConfig.xml";
         //的到配置文件流
-        InputStream inputStream =  Resources.getResourceAsStream(resource);
+        InputStream inputStream = Resources.getResourceAsStream(resource);
         //创建会话工厂
         sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
     }
+
     @Test
     public void testFinUserById() throws Exception {
         UserDao userDao = new UserDaoImpl(sqlSessionFactory);
         User user = userDao.findUserById(12);
         System.out.println(user);
     }
+
     @Test
-    public void insertUser() throws Exception{
+    public void insertUser() throws Exception {
         UserDao userDao = new UserDaoImpl(sqlSessionFactory);
         User user1 = new User();
         user1.setUsername("王麻子");
@@ -39,8 +42,9 @@ public class UserDaoImplTest {
         user1.setAddress("日本东京");
         userDao.insertUser(user1);
     }
+
     @Test
-    public void deleteUser() throws Exception{
+    public void deleteUser() throws Exception {
         UserDao userDao = new UserDaoImpl(sqlSessionFactory);
         userDao.deleteUser(13);
     }
