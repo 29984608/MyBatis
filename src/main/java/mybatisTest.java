@@ -1,4 +1,5 @@
-import entity.User;
+
+import entity.UserBean;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -24,7 +25,7 @@ public class mybatisTest {
         //通过SqlSession操作数据库
         //第一个参数：等于 = namespace+“.”+statement的id
         //第二个参数：指定映射文件中所匹配的parameterType类型的参数
-        User user = sqlSession.selectOne("test.findUserById", 1);
+        UserBean user = sqlSession.selectOne("test.findUserById", 1);
         System.out.println(user);
         sqlSession.close();
     }
@@ -34,7 +35,7 @@ public class mybatisTest {
         InputStream inputStream = Resources.getResourceAsStream("SqlMapConfig.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession sqlSession = sqlSessionFactory.openSession();
-        List<User> list = sqlSession.selectList("test.findUserByName", "马");
+        List<UserBean> list = sqlSession.selectList("test.findUserByName", "马");
         System.out.println(list + "\n");
     }
 
@@ -43,7 +44,7 @@ public class mybatisTest {
         InputStream inputStream = Resources.getResourceAsStream("SqlMapConfig.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession sqlSession = sqlSessionFactory.openSession();
-        User user = new User();
+        UserBean user = new UserBean();
         user.setUsername("张三");
         user.setBirthday(new Date());
         user.setSex("男");
@@ -70,7 +71,7 @@ public class mybatisTest {
         InputStream inputStream = Resources.getResourceAsStream("SqlMapConfig.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession sqlSession = sqlSessionFactory.openSession();
-        User user = new User();
+        UserBean user = new UserBean();
         user.setId(12);
         user.setUsername("李四");
         user.setBirthday(new Date());

@@ -23,7 +23,7 @@
     </sql>
 
     <!--配置resultMap映射-->
-    <resultMap id="PojoresultMap" type="entity.User">
+    <resultMap id="PojoresultMap" type="entity.UserBean">
         <id column="i" property="id"></id>
         <result column="us" property="username"></result>
         <result column="ad" property="address"></result>
@@ -36,7 +36,7 @@
        resultType:指定sql输出结果所映射的java对象类型
        #{ }表示一个占位符
        #{id}：其中的id表示接收输入的参数，参数名称就是id-->
-    <select id="findUserById" parameterType="int" resultType="entity.User">
+    <select id="findUserById" parameterType="int" resultType="entity.UserBean">
     SELECT * FROM user WHERE id = #{id}
     </select>
     <!--根据用户名称模糊查询信息-->
@@ -44,11 +44,11 @@
     ${}：表示拼接sql串，将接收到的参数的内容不加任何修饰拼接在sql中
     使用${}拼接sql，引起sql注入
     ${value}：接收输入参数的内容，如果出入类型是简单类型，${}只能使用value-->
-    <select id="findUserByName" parameterType="String" resultType="entity.User">
+    <select id="findUserByName" parameterType="String" resultType="entity.UserBean">
         SELECT * FROM  user WHERE username LIKE "${value}%"
     </select>
     <!--添加用户-->
-    <insert id="insertUser" parameterType="entity.User">
+    <insert id="insertUser" parameterType="entity.UserBean">
         <!--将插入数据的主键返回
         SELECT Last_insert_ID 得到刚插入的主键值 只适用与自增主键
 
@@ -66,7 +66,7 @@
         DELETE from user where id = #{id}
     </delete>
     <!--修改用户信息 根据id-->
-    <update id="updateUser" parameterType="entity.User">
+    <update id="updateUser" parameterType="entity.UserBean">
         UPDATE user SET username = #{username},birthday = #{birthday},sex = #{sex},address = #{address} WHERE  id = #{id}
     </update>
     <!--输入映射 包装类型-->

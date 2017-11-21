@@ -1,13 +1,11 @@
 import dao.UserDaoMapper;
-import entity.User;
+import entity.UserBean;
 import entity.UserCustom;
 import entity.UserQuerVo;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -34,7 +32,7 @@ public class UserDaoMapperTest {
         //创建UserMapper对象，mybatis自动生成mapper代理对象
         UserDaoMapper userDaoMapper = sqlSession.getMapper(UserDaoMapper.class);
         //调用usermapper对象
-        User user = userDaoMapper.findUserById(10);
+        UserBean user = userDaoMapper.findUserById(10);
         System.out.println(user);
     }
 
@@ -44,7 +42,7 @@ public class UserDaoMapperTest {
         //创建UserMapper对象，mybatis自动生成mapper代理对象
         UserDaoMapper userDaoMapper = sqlSession.getMapper(UserDaoMapper.class);
         //调用usermapper对象
-        User user = new User();
+        UserBean user = new UserBean();
         user.setUsername("短毛");
         user.setBirthday(new Date());
         user.setSex("女");
@@ -67,7 +65,7 @@ public class UserDaoMapperTest {
     public void updateUser() throws Exception {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         UserDaoMapper userDaoMapper = sqlSession.getMapper(UserDaoMapper.class);
-        User user = new User();
+        UserBean user = new UserBean();
         user.setId(12);
         user.setUsername("短毛");
         user.setBirthday(new Date());
@@ -96,7 +94,7 @@ public class UserDaoMapperTest {
     public void findUserByResultMap() throws Exception {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         UserDaoMapper userDaoMapper = sqlSession.getMapper(UserDaoMapper.class);
-        User user = userDaoMapper.findUserByResultMap(10);
+        UserBean user = userDaoMapper.findUserByResultMap(10);
         System.out.println(user);
     }
 

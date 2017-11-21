@@ -1,6 +1,6 @@
 import dao.UserDao;
 import dao.impl.UserDaoImpl;
-import entity.User;
+import entity.UserBean;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
@@ -28,14 +28,14 @@ public class UserDaoImplTest {
     @Test
     public void testFinUserById() throws Exception {
         UserDao userDao = new UserDaoImpl(sqlSessionFactory);
-        User user = userDao.findUserById(12);
+        UserBean user = userDao.findUserById(12);
         System.out.println(user);
     }
 
     @Test
     public void insertUser() throws Exception {
         UserDao userDao = new UserDaoImpl(sqlSessionFactory);
-        User user1 = new User();
+        UserBean user1 = new UserBean();
         user1.setUsername("王麻子");
         user1.setBirthday(new Date());
         user1.setSex("女");

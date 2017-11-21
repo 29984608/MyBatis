@@ -2,7 +2,7 @@ package entity;
 
 import java.util.Date;
 
-public class User {
+public class UserBean {
     private int id;
     private String username;
     private Date birthday;
