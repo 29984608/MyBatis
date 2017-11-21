@@ -48,4 +48,15 @@ public class OrdersBean {
     public void setNote(String note) {
         this.note = note;
     }
+
+    @Override
+    public String toString() {
+        return "OrdersBean{" +
+                "id=" + id +
+                ", user_id=" + user_id +
+                ", number='" + number + '\'' +
+                ", createtime=" + createtime +
+                ", note='" + note + '\'' +
+                '}';
+    }
 }

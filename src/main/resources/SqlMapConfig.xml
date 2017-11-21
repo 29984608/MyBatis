@@ -22,5 +22,6 @@
     <mappers>
         <mapper resource="sqlmap/userMap.xml"></mapper>
         <mapper resource="sqlmapper/userMapper.xml"></mapper>
+        <mapper resource="sqlmapper/OrdersMapperCustom"></mapper>
     </mappers>
 </configuration>
