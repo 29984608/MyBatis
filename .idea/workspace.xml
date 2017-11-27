@@ -7,18 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60d555dc-61ff-4e5e-80d5-866b3188c54d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/OrdersMapperTest.class" afterPath="$PROJECT_DIR$/target/classes/OrdersMapperTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/OrdersMapperCustom.class" afterPath="$PROJECT_DIR$/target/classes/dao/OrdersMapperCustom.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/entity/OrderdetailBean.class" afterPath="$PROJECT_DIR$/target/classes/entity/OrderdetailBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/entity/OrdersBean.class" afterPath="$PROJECT_DIR$/target/classes/entity/OrdersBean.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sqlmapper/OrdersMapperCustom" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/OrdersMapperTest.java" afterPath="$PROJECT_DIR$/src/main/java/OrdersMapperTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/OrdersMapperCustom.java" afterPath="$PROJECT_DIR$/src/main/java/dao/OrdersMapperCustom.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/OrderdetailBean.java" afterPath="$PROJECT_DIR$/src/main/java/entity/OrderdetailBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/OrdersBean.java" afterPath="$PROJECT_DIR$/src/main/java/entity/OrdersBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/UserBean.java" afterPath="$PROJECT_DIR$/src/main/java/entity/UserBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sqlmapper/OrdersMapperCustom" afterPath="$PROJECT_DIR$/src/main/resources/sqlmapper/OrdersMapperCustom" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sqlmapper/OrdersMapperCustom" afterPath="$PROJECT_DIR$/target/classes/sqlmapper/OrdersMapperCustom" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/SqlMapConfig.xml" afterPath="$PROJECT_DIR$/target/classes/SqlMapConfig.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/sqlmapper/OrdersMapperCustom" afterPath="$PROJECT_DIR$/src/main/resources/sqlmapper/OrdersMapperCustom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -79,8 +72,8 @@
       <file leaf-file-name="OrdersMapperTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/OrdersMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="715">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="1470">
+              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,73 +81,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entity/UserBean.java">
+      <file leaf-file-name="OrdersMapperCustom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmapper/OrdersMapperCustom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            <state relative-caret-position="-2961">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#304#305#0" expanded="true" />
-                <element signature="e#338#339#0" expanded="true" />
+                <marker date="1511803765639" expanded="true" signature="3703:3802" ph="SELECT order... user" />
+                <marker date="1511803765639" expanded="true" signature="3935:4034" ph="SELECT order... user" />
+                <marker date="1511803765639" expanded="true" signature="4188:4542" ph="SELECT order... orders" />
+                <marker date="1511803765639" expanded="true" signature="4668:5180" ph="SELECT order... orders" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrdersMapperCustom" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmapper/OrdersMapperCustom">
+      <file leaf-file-name="SqlMapConfig.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="101" column="8" lean-forward="true" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="21" />
+            <state relative-caret-position="639">
+              <caret line="24" column="54" lean-forward="false" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrdersMapperCustom.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/OrdersMapperCustom.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrdersBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entity/OrdersBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#setOrderdetailBeans#0;class#OrdersBean#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderdetailBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entity/OrderdetailBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemsBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entity/ItemsBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-              <folding>
-                <element signature="e#265#266#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -205,14 +152,15 @@
         <option value="$PROJECT_DIR$/src/main/java/UserDaoMapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/sqlmap/userMap.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/sqlmapper/userMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/java/pojo/OrdersCustom.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/OrdersBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/UserBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/OrderdetailBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/OrdersMapperTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/sqlmapper/OrdersMapperCustom" />
         <option value="$PROJECT_DIR$/src/main/java/dao/OrdersMapperCustom.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/sqlmapper/OrdersMapperCustom" />
+        <option value="$PROJECT_DIR$/src/main/resources/sqlmap/OrdersMapperCustom" />
+        <option value="$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml" />
       </list>
     </option>
   </component>
@@ -259,9 +207,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -325,6 +270,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="sqlmap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBatis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="sqlmapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -335,6 +288,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,7 +300,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SSH" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -353,6 +309,9 @@
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="dao.impl" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\MyBatis\src\main\resources\sqlmap" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="dao.impl.UserDaoImpl" />
@@ -676,20 +635,12 @@
       <workItem from="1511269246588" duration="3860000" />
       <workItem from="1511345200460" duration="6532000" />
       <workItem from="1511687672417" duration="7639000" />
-      <workItem from="1511754198443" duration="7240000" />
+      <workItem from="1511754198443" duration="10856000" />
+      <workItem from="1511803612362" duration="331000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OrdersMapperTest_findOrdersAndOrderdetailResultMap - 2017.11.27 at 11h 43m 52s.xml">
-      <configuration name="OrdersMapperTest.findOrdersAndOrderdetailResultMap" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OrdersMapperTest_findOrdersAndOrderdetailResultMap - 2017.11.27 at 14h 47m 39s.xml">
-      <configuration name="OrdersMapperTest.findOrdersAndOrderdetailResultMap" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OrdersMapperTest_findOrdersAndOrderdetailResultMap - 2017.11.27 at 14h 47m 44s.xml">
-      <configuration name="OrdersMapperTest.findOrdersAndOrderdetailResultMap" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="OrdersMapperTest_findOrdersUserResultMap - 2017.11.22 at 19h 20m 29s.xml">
       <configuration name="OrdersMapperTest.findOrdersUserResultMap" configurationId="JUnit" />
     </history-entry>
@@ -698,6 +649,15 @@
     </history-entry>
     <history-entry file="OrdersMapperTest_findOrdersUserResultMap - 2017.11.22 at 19h 23m 36s.xml">
       <configuration name="OrdersMapperTest.findOrdersUserResultMap" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrdersMapperTest_findUserAndItemsResultMap - 2017.11.28 at 01h 29m 19s.xml">
+      <configuration name="OrdersMapperTest.findUserAndItemsResultMap" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrdersMapperTest_findUserAndItemsResultMap - 2017.11.28 at 01h 30m 38s.xml">
+      <configuration name="OrdersMapperTest.findUserAndItemsResultMap" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrdersMapperTest_findUserAndItemsResultMap - 2017.11.28 at 01h 32m 25s.xml">
+      <configuration name="OrdersMapperTest.findUserAndItemsResultMap" configurationId="JUnit" />
     </history-entry>
     <history-entry file="UserDaoMapperTest_findUserCount - 2017.11.21 at 21h 21m 36s.xml">
       <configuration name="UserDaoMapperTest.findUserCount" configurationId="JUnit" />
@@ -713,7 +673,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78381000" />
+    <option name="totallyTimeSpent" value="82328000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -734,7 +694,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18496802" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18710022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14925373" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -764,21 +724,14 @@
           <url>file://$PROJECT_DIR$/src/main/java/OrdersMapperTest.java</url>
           <line>49</line>
           <properties />
-          <option name="timeStamp" value="10" />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -942,14 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/UserDaoImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1007,14 +952,6 @@
           <folding>
             <element signature="e#368#369#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="24" column="56" lean-forward="false" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1095,7 +1032,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1111,14 +1047,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entity/UserBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        <state relative-caret-position="150">
+          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#304#305#0" expanded="true" />
@@ -1129,7 +1064,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entity/OrdersBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
+        <state relative-caret-position="480">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1156,30 +1091,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/OrdersMapperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="715">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmapper/OrdersMapperCustom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="101" column="8" lean-forward="true" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/OrdersMapperCustom.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="99" column="34" lean-forward="false" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmap/OrdersMapperCustom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="849">
+          <caret line="123" column="9" lean-forward="false" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/OrdersMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="24" column="54" lean-forward="false" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmapper/OrdersMapperCustom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2961">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1511803765639" expanded="true" signature="3703:3802" ph="SELECT order... user" />
+            <marker date="1511803765639" expanded="true" signature="3935:4034" ph="SELECT order... user" />
+            <marker date="1511803765639" expanded="true" signature="4188:4542" ph="SELECT order... orders" />
+            <marker date="1511803765639" expanded="true" signature="4668:5180" ph="SELECT order... orders" />
           </folding>
         </state>
       </provider>
