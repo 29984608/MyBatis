@@ -1,6 +1,7 @@
 package entity;
 
 import java.util.Date;
+import java.util.List;
 
 public class UserBean {
     private int id;
@@ -8,6 +9,15 @@ public class UserBean {
     private Date birthday;
     private String sex;
     private String address;
+    private List<OrdersBean> ordersBeans;
+
+    public List<OrdersBean> getOrdersBeans() {
+        return ordersBeans;
+    }
+
+    public void setOrdersBeans(List<OrdersBean> ordersBeans) {
+        this.ordersBeans = ordersBeans;
+    }
 
     public int getId() {
         return id;

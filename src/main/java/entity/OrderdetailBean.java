@@ -1,10 +1,21 @@
 package entity;
 
+import java.util.List;
+
 public class OrderdetailBean {
     private int id;
     private int orders_id;
     private int items_id;
     private int item_num;
+    private ItemsBean itemsBean;
+
+    public ItemsBean getItemsBean() {
+        return itemsBean;
+    }
+
+    public void setItemsBean(ItemsBean itemsBean) {
+        this.itemsBean = itemsBean;
+    }
 
     public int getId() {
         return id;
@@ -36,5 +47,15 @@ public class OrderdetailBean {
 
     public void setItem_num(int item_num) {
         this.item_num = item_num;
+    }
+
+    @Override
+    public String toString() {
+        return "OrderdetailBean{" +
+                "id=" + id +
+                ", orders_id=" + orders_id +
+                ", items_id=" + items_id +
+                ", item_num=" + item_num +
+                '}';
     }
 }

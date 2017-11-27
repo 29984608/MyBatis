@@ -1,4 +1,6 @@
 import dao.OrdersMapperCustom;
+import entity.OrdersBean;
+import entity.UserBean;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -26,4 +28,26 @@ public class OrdersMapperTest {
          List<OrdersMapperCustom> ordersCustom = ordersMapperCustom.findOrdersUser();
         System.out.println(ordersCustom);
     }
+    @Test
+    public void findOrdersUserResultMap() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        OrdersMapperCustom ordersMapperCustom = sqlSession.getMapper(OrdersMapperCustom.class);
+        List<OrdersBean> ordersBeans = ordersMapperCustom.findOrdersUserResultMap();
+        System.out.println(ordersBeans);
+    }
+    @Test
+    public void findOrdersAndOrderdetailResultMap() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        OrdersMapperCustom ordersMapperCustom = sqlSession.getMapper(OrdersMapperCustom.class);
+        List<OrdersBean> ordersBeans = ordersMapperCustom.findOrdersAndOrderdetailResultMap();
+        System.out.println(ordersBeans);
+    }
+    @Test
+    public void findUserAndItemsResultMap() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        OrdersMapperCustom ordersMapperCustom = sqlSession.getMapper(OrdersMapperCustom.class);
+        List<UserBean> userBeans  = ordersMapperCustom.findUserAndItemsResultMap();
+        System.out.println(userBeans);
+    }
+
 }

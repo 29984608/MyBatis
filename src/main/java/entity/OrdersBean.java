@@ -1,6 +1,7 @@
 package entity;
 
 import java.util.Date;
+import java.util.List;
 
 public class OrdersBean {
     private int id;
@@ -8,6 +9,27 @@ public class OrdersBean {
     private String number;
     private Date createtime;
     private String note;
+    //用户信息
+    private UserBean userBean;
+
+    //订单信息
+    private List<OrderdetailBean> orderdetailBeans;
+
+    public List<OrderdetailBean> getOrderdetailBeans() {
+        return orderdetailBeans;
+    }
+
+    public void setOrderdetailBeans(List<OrderdetailBean> orderdetailBeans) {
+        this.orderdetailBeans = orderdetailBeans;
+    }
+
+    public UserBean getUserBean() {
+        return userBean;
+    }
+
+    public void setUserBean(UserBean userBean) {
+        this.userBean = userBean;
+    }
 
     public int getId() {
         return id;
@@ -51,7 +73,7 @@ public class OrdersBean {
 
     @Override
     public String toString() {
-        return "OrdersBean{" +
+        return orderdetailBeans.toString()+userBean.toString()+"OrdersBean{" +
                 "id=" + id +
                 ", user_id=" + user_id +
                 ", number='" + number + '\'' +

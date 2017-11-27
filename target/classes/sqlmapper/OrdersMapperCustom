@@ -3,7 +3,122 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="dao.OrdersMapperCustom">
+    <!--订单查询关联用户的resultMap-->
+    <resultMap id="OrdersUserResultMap" type="entity.OrdersBean">
+        <!--配置映射的订单信息-->
+        <id column="id" property="id"></id>
+        <result column="user_id" property="user_id"></result>
+        <result column="number" property="number"></result>
+        <result column="createtime" property="createtime"></result>
+        <result column="note" property="note"></result>
+        <!--配置映射的关联的用户信息-->
+        <!--association:用于映射关联查询单个对象的信息
+        property:要将关联查询的用户信息映射到Orders中哪个属性-->
+        <association property="userBean" javaType="entity.UserBean">
+            <!--id:关联查询用户的唯一标识
+            column：指定唯一标识用户信息的列
+            javaType：映射到user的那个属性-->
+            <id column="user_id" property="id"></id>
+            <result column="username" property="username"></result>
+            <result column="sex" property="sex"></result>
+            <result column="address" property="address"></result>
+        </association>
+    </resultMap>
+    <!--查询订单关联用户及订单明细，使用resultMap-->
+    <resultMap id="OrdersAndOrderdetailResultMap" type="entity.OrdersBean" extends="OrdersUserResultMap">
+        <!--订单信息-->
+        <!--用户信息-->
+
+
+        <!--明细信息
+        一个订单关联查询出多条明细，要使用collection进行映射
+        collection：对关联查询到的多条记录映射到集合对象
+        property：将关联查询到的多条记录映射到OrdersBean属性
+        ofType:指定映射到集合属性的poio的类型
+        -->
+        <collection property="orderdetailBeans" ofType="entity.OrderdetailBean">
+            <!--id:订单明细唯一标识-->
+            <id column="orderdetail_id" property="id"></id>
+            <result column="items_id" property="orders_id"></result>
+            <result column="items_id" property="items_id"></result>
+            <result column="orders_id" property="orders_id"></result>
+        </collection>
+    </resultMap>
+    <!--查询用户及用户购买商品信息-->
+    <resultMap id="UserAndItemsResultMap" type="entity.UserBean">
+        <!--用户信息-->
+        <id column="id" property="id"></id>
+        <result column="username" property="username"></result>
+        <result column="sex" property="sex"></result>
+        <result column="address" property="address"></result>
+        <!--订单信息-->
+        <collection property="ordersBeans" ofType="entity.OrdersBean">
+            <id column="id" property="id"></id>
+            <result column="user_id" property="user_id"></result>
+            <result column="number" property="number"></result>
+            <result column="createtime" property="createtime"></result>
+            <result column="note" property="note"></result>
+            <!--订单明细-->
+            <collection property="orderdetailBeans" ofType="entity.OrderdetailBean">
+                <id column="orderdetail_id" property="id"></id>
+                <result column="items_id" property="orders_id"></result>
+                <result column="items_id" property="items_id"></result>
+                <result column="orders_id" property="orders_id"></result>
+                <!--商品信息-->
+                <association property="itemsBean" javaType="entity.ItemsBean">
+                <id column="items_id" property="id"></id>
+                    <result column="items_name" property="name"></result>
+                    <result column="items_detail" property="detail"></result>
+                    <result column="items_price" property="price"></result>
+                </association>
+            </collection>
+        </collection>
+    </resultMap>
+    <!--查询订单关联查询用户信息，使用resultType-->
     <select id="findOrdersUser" resultType="pojo.OrdersCustom">
-        SELECT orders.*,user.username,user.sex,user.address FROM user,orders WHERE orders.user_id = user.id
+    SELECT orders.*,user.username,user.sex,user.address FROM user,orders WHERE orders.user_id = user.id
+</select>
+    <!--查询订单关联查询用户信息，使用resultMap-->
+    <select id="findOrdersUserResultMap" resultMap="OrdersUserResultMap">
+    SELECT orders.*,user.username,user.sex,user.address FROM user,orders WHERE orders.user_id = user.id
+</select>
+    <!--查询订单关联用户及订单明细，使用resultMap-->
+    <select id="findOrdersAndOrderdetailResultMap" resultMap="OrdersAndOrderdetailResultMap">
+	SELECT
+	 orders.*,
+	 user.username,
+	 user.sex,
+	 user.address,
+	 orderdetail.id orderdetail_id,
+	 orderdetail.items_id,
+	 orderdetail.item_num,
+	 orderdetail.orders_id
+	FROM
+	 orders,
+	 USER,
+	 orderdetail
+	WHERE orders.user_id = user.id AND orderdetail.orders_id=orders.id
+    </select>
+    <!--查询用户及用户购买商品信息-->
+    <select id="findUserAndItemsResultMap" resultMap="UserAndItemsResultMap">
+  SELECT
+ orders.*,
+ user.username,
+ user.sex,
+ user.address,
+ orderdetail.id orderdetail_id,
+ orderdetail.items_id,
+ orderdetail.item_num,
+ orderdetail.orders_id,
+ items.name items_name,
+ items.detail items_detail,
+ items.price items_price
+FROM
+ orders,
+USER,
+ orderdetail,
+ items
+WHERE
+ orders.user_id = user.id AND orderdetail.orders_id=orders.id AND orderdetail.items_id = items.id
     </select>
 </mapper>
