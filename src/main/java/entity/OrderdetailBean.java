@@ -49,13 +49,4 @@ public class OrderdetailBean {
         this.item_num = item_num;
     }
 
-    @Override
-    public String toString() {
-        return "OrderdetailBean{" +
-                "id=" + id +
-                ", orders_id=" + orders_id +
-                ", items_id=" + items_id +
-                ", item_num=" + item_num +
-                '}';
-    }
 }

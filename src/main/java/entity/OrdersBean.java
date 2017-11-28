@@ -71,14 +71,4 @@ public class OrdersBean {
         this.note = note;
     }
 
-    @Override
-    public String toString() {
-        return orderdetailBeans.toString()+userBean.toString()+"OrdersBean{" +
-                "id=" + id +
-                ", user_id=" + user_id +
-                ", number='" + number + '\'' +
-                ", createtime=" + createtime +
-                ", note='" + note + '\'' +
-                '}';
-    }
 }

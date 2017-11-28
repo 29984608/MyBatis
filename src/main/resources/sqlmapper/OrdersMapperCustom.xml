@@ -95,7 +95,7 @@
         orderdetail.orders_id
         FROM
         orders,
-        USER,
+        user,
         orderdetail
         WHERE orders.user_id = user.id AND orderdetail.orders_id=orders.id
     </select>
@@ -115,7 +115,7 @@
         items.price items_price
         FROM
         orders,
-        USER,
+        user,
         orderdetail,
         items
         WHERE
